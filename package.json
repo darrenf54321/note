@@ -1,0 +1,25 @@
+{
+  "name": "note",
+  "version": "1.0.0",
+  "description": "save and display notes",
+  "main": "note-list-model.js",
+  "dependencies": {
+    "http-server": "^0.9.0",
+    "note": "^1.2.1",
+    "uniq": "^1.0.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/darrenf54321/note.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/darrenf54321/note/issues"
+  },
+  "homepage": "https://github.com/darrenf54321/note#readme"
+}

@@ -1,6 +1,6 @@
-require("./note-model")
-var getText = require("./note-model").getText;
-var note = require("./note-model").Note;
+require(".src/note-model")
+var getText = require(".src/note-model").getText;
+var note = require(".src/note-model").Note;
 
 function testTextofANoteUponInstantiation(string) {
   var note = Note(string);
