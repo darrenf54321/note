@@ -7,13 +7,22 @@
 
   NoteListView.prototype.convertToHtml = function (notelist) {
     if (this.notelist.notes.length > 0){
-      for (var i = 0; i < this.notelist.noteStrings.length; i++){
-        var html = "<ul><li><div> " + this.notelist.noteStrings[i] + " </div></li></ul>";
-        this.converted.push(html);
-      }
+      this._isNoteLongerThan20Chars();
     } else if (this.notelist.notes.length === 0){
       return "You have no notes to convert."
     }
+  };
+
+  NoteListView.prototype._isNoteLongerThan20Chars = function () {
+    for (var i = 0; i < this.notelist.noteStrings.length; i++){
+      if (this.notelist.noteStrings[i].length > 20){
+        var html = "<ul><li><div> " + this.notelist.noteStrings[i].slice(0,20) + "..." + " </div></li></ul>";
+        this.converted.push(html);
+      } else {
+        var html = "<ul><li><div> " + this.notelist.noteStrings[i] + " </div></li></ul>";
+        this.converted.push(html);
+      }
+    };
   };
 
   exports.NoteListView = NoteListView;

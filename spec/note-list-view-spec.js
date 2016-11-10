@@ -1,7 +1,7 @@
 describe('NoteListView', function() {
 
     it('should iterate through a list and convert each notes string to html', function() {
-        var note = new Note("I like cheese")
+        var note = new Note("I like cheese because it makes me feel like a mouse")
         var note2 = new Note("Cake is good too")
         var notelist = new NoteList();
         notelist.addNote(note);
@@ -9,7 +9,7 @@ describe('NoteListView', function() {
         notelist.convertToString();
         var notelistview = new NoteListView(notelist);
         notelistview.convertToHtml(notelist);
-        expect(notelistview.converted[0]).toEqual("<ul><li><div> I like cheese </div></li></ul>");
+        expect(notelistview.converted[0]).toEqual("<ul><li><div> I like cheese becaus... </div></li></ul>");
         expect(notelistview.converted[1]).toEqual("<ul><li><div> Cake is good too </div></li></ul>");
     });
 

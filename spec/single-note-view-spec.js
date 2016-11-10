@@ -3,5 +3,4 @@ describe('SingleNoteView', function() {
     var singlenoteview = new SingleNoteView(note);
     var html = singlenoteview.convertToHtml(note);
     expect(html).toEqual("<div> I can show you the World </div>")
-
 })
