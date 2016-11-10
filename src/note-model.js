@@ -1,13 +1,16 @@
-(function(exports){
+(function(exports) {
 
-  function Note(text){
-    this.string = text;
-  }
+    var idCounter = -1;
 
-  Note.prototype.text = function(){
-    return this.string;
-  }
+    function Note(text) {
+        this.string = text;
+        this.id = idCounter++
+    }
 
-  exports.Note = Note;
+    Note.prototype.text = function() {
+        return this.string;
+    }
+
+    exports.Note = Note;
 
 })(this)
